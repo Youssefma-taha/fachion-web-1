@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<body>
+    <title>web collection</title>
+    <style>
+        .dataimages{
+            width:150px ;
+            
+            
+            border-radius:15px 15px;
+      }
+       body{
+        margin: 0px;
+       } 
+        .bac{
+            background-color: darkgray;
+            height: 600px ;
+            margin: 0;
+        
+        }
+        .bac1{
+            background-color: darkgray; 
+            
+        }
+        
+button {
+    position: relative;
+  overflow: hidden;
+  outline: none;
+  cursor: pointer;
+  border-radius: 0px;
+  border: none;
+  background-color: hsl(255deg 50% 40%);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  font-family: "Inter", sans-serif;
+  padding-bottom: 250px;
+  padding-top: 300px;
+padding:10px ;
+}
+
+.default-btn {
+  background-image: linear-gradient(
+    90.1deg,
+    rgba(84, 212, 228, 1) 0.2%,
+    rgba(68, 36, 164, 1) 99.9%
+  );
+}
+
+.default-btn,
+.hover-btn {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 1em 3em;
+  border-radius: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.hover-btn {
+  position: absolute;
+  inset: 0;
+  font-size: 16px;
+  padding: 1em 3em;
+  text-align: center;
+  background: rgb(26, 35, 126);
+  background: linear-gradient(
+    63deg,
+    rgba(26, 35, 126, 1) 0%,
+    rgba(69, 39, 160, 1) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  transform: translate(0%, 100%);
+}
+
+.default-btn span {
+  color: hsl(0, 0%, 100%);
+}
+
+.hover-btn span {
+  color: hsl(0, 0%, 100%);
+}
+
+button:hover .default-btn {
+  transform: translate(0%, -100%);
+}
+
+button:hover .hover-btn {
+  transform: translate(0%, 0%);
+}
+/* From Uiverse.io by elijahgummer */ 
+.radio {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.radio > input {
+  position: absolute;
+  appearance: none;
+}
+
+.radio > label {
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.radio > label > svg {
+  fill: #666;
+  transition: fill 0.3s ease;
+}
+
+.radio > label::before,
+.radio > label::after {
+  content: "";
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background-color: #ff9e0b;
+  border-radius: 50%;
+  opacity: 0;
+  transform: scale(0);
+  transition:
+    transform 0.4s ease,
+    opacity 0.4s ease;
+  animation: particle-explosion 1s ease-out;
+}
+
+.radio > label::before {
+  top: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.radio > label::after {
+  bottom: -15px;
+  left: 50%;
+  transform: translateX(-50%) scale(0);
+}
+
+.radio > label:hover::before,
+.radio > label:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1.5);
+}
+
+.radio > label:hover {
+  transform: scale(1.2);
+  animation: pulse 0.6s infinite alternate;
+}
+
+/* Star glow and animation on hover */
+.radio > label:hover > svg {
+  fill: #ff9e0b;
+  filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+  animation: shimmer 1s ease infinite alternate;
+}
+
+.radio > input:checked + label > svg {
+  fill: #ff9e0b;
+  filter: drop-shadow(0 0 15px rgba(255, 158, 11, 0.9));
+  animation: pulse 0.8s infinite alternate;
+}
+
+.radio > input:checked + label ~ label > svg,
+.radio > input:checked + label > svg {
+  fill: #ff9e0b; /* Highlight the stars */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes particle-explosion {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    filter: drop-shadow(0 0 10px rgba(255, 158, 11, 0.5));
+  }
+  100% {
+    filter: drop-shadow(0 0 20px rgba(255, 158, 11, 1));
+  }
+}
+
+.radio > input:checked + label:hover,
+.radio > input:checked + label:hover ~ label {
+  fill: #e58e09;
+}
+
+.radio > label:hover,
+.radio > label:hover ~ label {
+  fill: #ff9e0b;
+}
+
+.radio input:checked ~ label svg {
+  fill: #ffa723;
+}
+
+    </style>
+    <div class="bac1" >
+    <div class="bac" ><img class="dataimages"src="data:image/jpeg;base64,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fo3jsAWqIrY53HwiyXy8oY/o3W0DstXTPiF7CQi8LvRI27T6L37lxS9hvYHAtcA5p3FpAII7CDxXUcX1Z4TUkk0ggefh0zjF45B1P/ldOPqfuMrw/TzVdSRZbTW6j4eNPXyM7p4I5Paws+xcVNqRq79WvgcPjRSt+y60nPh9qdqsqui1OPUhVk9augA+LHM4+o2XJ0Wo5gP5fEXOHmw07WH6TnO+xLz4faO1kxlfuwfBqqsfs6Wnkndex2bbtb8p56rPEhegMJ1V4RT2Jp3VLh8KqkLwfTG2zD4tXcqanZG0MjY2ONos1kbWtY0dzRuCzy9TPiLzh+2RaKamAMsmJy5ufRYHG3ofLuPg23ylrVFRxQRsihjbFEwWZHG0NY0dwC+6hxXNlncvLaYyeAlSqBvMq6qkREQEREBERAREQEREBERBBP45Kobcb+auiAiIgIiICIiAiIgIiICIiCCVUNurogIiICIiAiIgIiICIiAiIgIiICIiAiIgIoIQBBKIiAiIgIiICIiAiIgIiICXQhQAglERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREBERAREQEREH//2Q==">
+             <h2>hello in your library</h2>
+                 <div>   <h3>your item</h3>
+            </div>
+            </div>
+            
+<hr>
+<div><h4>prix total</h4></div>
+<button>
+  <div class="default-btn">
+    <svg
+      viewBox="0 0 24 24"
+      width="20"
+      height="20"
+      stroke="#ffffff"
+      stroke-width="2"
+      fill="none"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="cart-icon"
+    >
+      <circle cx="9" cy="21" r="1"></circle>
+      <circle cx="20" cy="21" r="1"></circle>
+      <path
+        d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"
+      ></path>
+    </svg>
+    <span>Add to Cart</span>
+  </div>
+  <div class="hover-btn">
+    <svg
+      viewBox="0 0 320 512"
+      width="12.5"
+      height="20"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M160 0c17.7 0 32 14.3 32 32V67.7c1.6 .2 3.1 .4 4.7 .7c.4 .1 .7 .1 1.1 .2l48 8.8c17.4 3.2 28.9 19.9 25.7 37.2s-19.9 28.9-37.2 25.7l-47.5-8.7c-31.3-4.6-58.9-1.5-78.3 6.2s-27.2 18.3-29 28.1c-2 10.7-.5 16.7 1.2 20.4c1.8 3.9 5.5 8.3 12.8 13.2c16.3 10.7 41.3 17.7 73.7 26.3l2.9 .8c28.6 7.6 63.6 16.8 89.6 33.8c14.2 9.3 27.6 21.9 35.9 39.5c8.5 17.9 10.3 37.9 6.4 59.2c-6.9 38-33.1 63.4-65.6 76.7c-13.7 5.6-28.6 9.2-44.4 11V480c0 17.7-14.3 32-32 32s-32-14.3-32-32V445.1c-.4-.1-.9-.1-1.3-.2l-.2 0 0 0c-24.4-3.8-64.5-14.3-91.5-26.3c-16.1-7.2-23.4-26.1-16.2-42.2s26.1-23.4 42.2-16.2c20.9 9.3 55.3 18.5 75.2 21.6c31.9 4.7 58.2 2 76-5.3c16.9-6.9 24.6-16.9 26.8-28.9c1.9-10.6 .4-16.7-1.3-20.4c-1.9-4-5.6-8.4-13-13.3c-16.4-10.7-41.5-17.7-74-26.3l-2.8-.7 0 0C119.4 279.3 84.4 270 58.4 253c-14.2-9.3-27.5-22-35.8-39.6c-8.4-17.9-10.1-37.9-6.1-59.2C23.7 116 52.3 91.2 84.8 78.3c13.3-5.3 27.9-8.9 43.2-11V32c0-17.7 14.3-32 32-32z"
+        fill="#ffffff"
+      ></path>
+    </svg>
+    <span>00,00</span>
+  </div>
+</button>
+                                   <h3> Give me a rating</h3>
+<div class="radio">
+  <input value="1" name="rating" type="radio" id="rating-1" />
+  <label title="1 stars" for="rating-1">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+      <path
+        d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+      ></path>
+    </svg>
+  </label>
+
+  <input value="2" name="rating" type="radio" id="rating-2" />
+  <label title="2 stars" for="rating-2">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+      <path
+        d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+      ></path>
+    </svg>
+  </label>
+
+  <input value="3" name="rating" type="radio" id="rating-3" />
+  <label title="3 stars" for="rating-3">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+      <path
+        d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+      ></path>
+    </svg>
+  </label>
+
+  <input value="4" name="rating" type="radio" id="rating-4" />
+  <label title="4 stars" for="rating-4">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+      <path
+        d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+      ></path>
+    </svg>
+  </label>
+
+  <input value="5" name="rating" type="radio" id="rating-5" />
+  <label title="5 star" for="rating-5">
+    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 576 512">
+      <path
+        d="M316.9 18C311.6 7 300.4 0 288.1 0s-23.4 7-28.8 18L195 150.3 51.4 171.5c-12 1.8-22 10.2-25.7 21.7s-.7 24.2 7.9 32.7L137.8 329 113.2 474.7c-2 12 3 24.2 12.9 31.3s23 8 33.8 2.3l128.3-68.5 128.3 68.5c10.8 5.7 23.9 4.9 33.8-2.3s14.9-19.3 12.9-31.3L438.5 329 542.7 225.9c8.6-8.5 11.7-21.2 7.9-32.7s-13.7-19.9-25.7-21.7L381.2 150.3 316.9 18z"
+      ></path>
+    </svg>
+  </label>
+</div>
+
+</div>
+</body>
